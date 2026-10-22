@@ -1,0 +1,76 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment & Secret Keys
+venv/
+env/
+ENV/
+.env
+.venv/
+env.bak/
+venv.bak/
+
+# Dataset files (Keeps repository lightweight; datasets can be fetched or generated)
+data/*
+*.jsonl
+!data/.gitkeep
+
+# Large Model Checkpoints & Binary Weights (Exceed GitHub 100MB limit)
+# Host production weights on Hugging Face Hub or Git LFS
+*.onnx
+*.onnx.data
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.tflite
+*.mlmodel
+*.mlpackage/
+
+# LODO Experiment Folds (Internal ablation / training artifacts)
+checkpoints/lodo/
+
+# Keep production model metadata, tokenizer, and config files
+!checkpoints/laya_prompt_injection/
+!checkpoints/laya_prompt_injection/**/config.json
+!checkpoints/laya_prompt_injection/**/tokenizer.json
+!checkpoints/laya_prompt_injection/**/tokenizer_config.json
+!checkpoints/laya_prompt_injection/**/rl_agent_config.json
+!checkpoints/laya_prompt_injection/**/questions.json
+
+# Caches and build artifacts
+.cache/
+huggingface/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Logs and runtime telemetry
+*.log
+runs/
+wandb/
+
+# OS metadata
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE & Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

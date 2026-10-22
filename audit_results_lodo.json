@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-10-19 13:19:36",
+  "base_model": "convaiinnovations/laya",
+  "device": "cpu",
+  "threshold": 0.4,
+  "folds": [
+    {
+      "fold": 1,
+      "held_out": "protectai.jsonl",
+      "train_sources": [
+        "bipia.jsonl",
+        "s_labs.jsonl"
+      ],
+      "train_samples": 135,
+      "in_dist_val_samples": 15,
+      "held_out_samples": 150,
+      "in_dist_metrics": {
+        "loss": 0.2587350606918335,
+        "total_samples": 15,
+        "true_positives": 3,
+        "false_negatives": 2,
+        "false_positives": 0,
+        "true_negatives": 10,
+        "recall": 0.6,
+        "precision": 1.0,
+        "f1": 0.7499999999999999,
+        "accuracy": 0.8666666666666667,
+        "fnr": 0.4,
+        "fpr": 0.0
+      },
+      "held_out_metrics": {
+        "loss": 1.8080559849739075,
+        "total_samples": 150,
+        "true_positives": 25,
+        "false_negatives": 35,
+        "false_positives": 8,
+        "true_negatives": 82,
+        "recall": 0.4166666666666667,
+        "precision": 0.7575757575757576,
+        "f1": 0.5376344086021506,
+        "accuracy": 0.7133333333333334,
+        "fnr": 0.5833333333333334,
+        "fpr": 0.08888888888888889
+      },
+      "gap_f1": 0.21236559139784927,
+      "gap_recall": 0.1833333333333333,
+      "gap_accuracy": 0.15333333333333332,
+      "train_duration_sec": 55.59230875968933
+    },
+    {
+      "fold": 2,
+      "held_out": "bipia.jsonl",
+      "train_sources": [
+        "protectai.jsonl",
+        "s_labs.jsonl"
+      ],
+      "train_samples": 135,
+      "in_dist_val_samples": 15,
+      "held_out_samples": 125,
+      "in_dist_metrics": {
+        "loss": 1.561303734779358,
+        "total_samples": 15,
+        "true_positives": 4,
+        "false_negatives": 4,
+        "false_positives": 0,
+        "true_negatives": 7,
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.6666666666666666,
+        "accuracy": 0.7333333333333333,
+        "fnr": 0.5,
+        "fpr": 0.0
+      },
+      "held_out_metrics": {
+        "loss": 3.0023057609796524,
+        "total_samples": 125,
+        "true_positives": 65,
+        "false_negatives": 60,
+        "false_positives": 0,
+        "true_negatives": 0,
+        "recall": 0.52,
+        "precision": 1.0,
+        "f1": 0.6842105263157895,
+        "accuracy": 0.52,
+        "fnr": 0.48,
+        "fpr": 0.0
+      },
+      "gap_f1": -0.01754385964912286,
+      "gap_recall": -0.020000000000000018,
+      "gap_accuracy": 0.21333333333333326,
+      "train_duration_sec": 88.58939528465271
+    },
+    {
+      "fold": 3,
+      "held_out": "s_labs.jsonl",
+      "train_sources": [
+        "protectai.jsonl",
+        "bipia.jsonl"
+      ],
+      "train_samples": 135,
+      "in_dist_val_samples": 15,
+      "held_out_samples": 150,
+      "in_dist_metrics": {
+        "loss": 1.1419122219085693,
+        "total_samples": 15,
+        "true_positives": 4,
+        "false_negatives": 3,
+        "false_positives": 1,
+        "true_negatives": 7,
+        "recall": 0.5714285714285714,
+        "precision": 0.8,
+        "f1": 0.6666666666666666,
+        "accuracy": 0.7333333333333333,
+        "fnr": 0.42857142857142855,
+        "fpr": 0.125
+      },
+      "held_out_metrics": {
+        "loss": 1.4632785350084305,
+        "total_samples": 150,
+        "true_positives": 33,
+        "false_negatives": 41,
+        "false_positives": 4,
+        "true_negatives": 72,
+        "recall": 0.44594594594594594,
+        "precision": 0.8918918918918919,
+        "f1": 0.5945945945945946,
+        "accuracy": 0.7,
+        "fnr": 0.5540540540540541,
+        "fpr": 0.05263157894736842
+      },
+      "gap_f1": 0.072072072072072,
+      "gap_recall": 0.12548262548262545,
+      "gap_accuracy": 0.033333333333333326,
+      "train_duration_sec": 146.82431650161743
+    }
+  ],
+  "macro_average": {
+    "in_dist_f1": 0.6944444444444443,
+    "in_dist_recall": 0.5571428571428572,
+    "held_out_f1": 0.6054798431708449,
+    "held_out_recall": 0.46087087087087086,
+    "gap_f1": 0.08896460127359947,
+    "gap_recall": 0.09627198627198624
+  }
+}

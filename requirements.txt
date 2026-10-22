@@ -1,0 +1,28 @@
+# Core Deep Learning & Tensor Framework
+torch>=2.4.0
+
+# Hugging Face & Modeling
+transformers>=4.48.0
+tokenizers>=0.21.0
+datasets>=3.0.0
+safetensors>=0.4.5
+huggingface_hub>=0.26.0
+
+# Non-Autoregressive Decision Engine
+laya>=0.3.0
+
+# Inference Acceleration (Cross-Platform: DirectML / CUDA / CoreML / CPU)
+onnxruntime-directml>=1.20.0; sys_platform == 'win32'
+onnxruntime>=1.20.0; sys_platform != 'win32'
+
+# Web Middleware Framework & Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.8.0
+
+# Utilities & Math
+numpy>=1.26.0
+tqdm>=4.66.0
+requests>=2.32.0
+scikit-learn>=1.5.0
+rich>=13.8.0

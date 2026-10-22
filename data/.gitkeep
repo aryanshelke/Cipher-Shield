@@ -1,0 +1,3 @@
+# Directory placeholder to keep the data/ directory structure in Git.
+# Place training and validation JSONL datasets (e.g., train_noul.jsonl, val_noul.jsonl) here.
+

@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-10-19 14:24:17",
+  "validation_samples": 150,
+  "prompt_guard_metrics": {
+    "model_name": "Meta Prompt-Guard-86M",
+    "total_samples": 150,
+    "true_positives": 77,
+    "false_positives": 69,
+    "true_negatives": 0,
+    "false_negatives": 4,
+    "accuracy": 0.5133333333333333,
+    "precision": 0.5273972602739726,
+    "recall": 0.9506172839506173,
+    "f1": 0.6784140969162996,
+    "fpr": 1.0,
+    "fnr": 0.04938271604938271,
+    "eval_duration_ms": 27213.171699999293,
+    "avg_latency_ms": 181.42114466666195
+  },
+  "laya_coreml_metrics": {
+    "model_name": "Cipher Fine-Tuned Laya (CoreML/ONNX)",
+    "provider": "CPU",
+    "total_samples": 150,
+    "true_positives": 72,
+    "false_positives": 12,
+    "true_negatives": 57,
+    "false_negatives": 9,
+    "accuracy": 0.86,
+    "precision": 0.8571428571428571,
+    "recall": 0.8888888888888888,
+    "f1": 0.8727272727272727,
+    "fpr": 0.17391304347826086,
+    "fnr": 0.1111111111111111,
+    "eval_duration_ms": 44785.39699999965,
+    "avg_latency_ms": 298.56931333333097
+  },
+  "latency_benchmark": {
+    "benchmark_samples": 50,
+    "iterations": 25,
+    "device": "cpu",
+    "prompt_guard": {
+      "mean_ms": 324.0660359998583,
+      "median_ms": 320.9452999999485,
+      "p95_ms": 341.09908000064024,
+      "std_ms": 10.261695809281933,
+      "throughput_qps": 3.085790823202581
+    },
+    "laya_coreml": {
+      "mean_ms": 727.8227480001806,
+      "median_ms": 724.3588000001182,
+      "p95_ms": 756.5170800007763,
+      "std_ms": 15.69486431246951,
+      "throughput_qps": 1.3739609029089481,
+      "provider": "CPU"
+    }
+  },
+  "markdown_table": "| Evaluation Metric / Attribute | Meta Prompt-Guard-86M (Baseline) | Cipher Fine-Tuned Laya (CoreML) | Operational Advantage / Delta |\n| :--- | :---: | :---: | :---: |\n| **Model Architecture** | mDeBERTa-v3-base (86M params) | ModernBERT-large + Decision Head | Non-autoregressive security head |\n| **F1-Score** | **0.6784** | **0.8727** | **+28.6% Relative Improvement** |\n| **Precision** | **52.74%** | **85.71%** | **+32.97% Absolute Gain** |\n| **Recall (Catch Rate)** | **95.06%** | **88.89%** | Balanced intercept capability |\n| **False Positive Rate (FPR)** | **100.00%** *(Catastrophic Overblock)* | **17.39%** | **+82.61% Over-blocking Reduction** |\n| **False Negative Rate (FNR)** | **4.94%** | **11.11%** | Low leakage threshold |\n| **Overall Accuracy** | **51.33%** | **86.00%** | **+34.7% Accuracy Delta** |\n| **True Positives / Actual Inj** | 77 / 81 | 72 / 81 | Reliable attack defense |\n| **False Positives / Actual Safe**| 69 / 69 | 12 / 69 | **57 fewer benign queries blocked** |\n| **Mean Latency / Sample** | **324.1 ms** (CPU) | **727.8 ms** (CPU) | Sub-second real-time middleware |\n| **Latency P95** | **341.1 ms** | **756.5 ms** | Predictable deterministic runtime |\n| **Inference Framework** | PyTorch (`transformers` pipeline) | Apple CoreML / ONNX Runtime | Native edge & server optimization |"
+}
